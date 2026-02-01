@@ -5,9 +5,6 @@ SDK for interacting with the rOre Game smart contract on Ronin.
 ## Installation
 
 ```bash
-# From npm (if published)
-npm install ore-game-sdk
-
 # From GitHub
 npm install github:viko42/ore-game-sdk
 ```
