@@ -1,0 +1,46 @@
+{
+  "name": "rore-game-sdk",
+  "version": "1.0.0",
+  "description": "SDK for interacting with the Ore Game smart contract on Ronin",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "viem": "^2.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "tsup": "^8.0.0",
+    "viem": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viko42/rore-game-sdk"
+  },
+  "keywords": [
+    "ronin",
+    "ore-game",
+    "blockchain",
+    "sdk",
+    "web3"
+  ],
+  "license": "MIT"
+}
