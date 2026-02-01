@@ -1,4 +1,4 @@
-# ore-game-sdk
+# rore-game-sdk
 
 SDK for interacting with the rOre Game smart contract on Ronin.
 
@@ -6,7 +6,7 @@ SDK for interacting with the rOre Game smart contract on Ronin.
 
 ```bash
 # From GitHub
-npm install github:viko42/ore-game-sdk
+npm install github:viko42/rore-game-sdk
 ```
 
 ## Requirements
@@ -16,7 +16,7 @@ npm install github:viko42/ore-game-sdk
 ## Quick Start
 
 ```typescript
-import { init, getRound, prepareMineTx, getCurrentRoundId } from 'ore-game-sdk';
+import { init, getRound, prepareMineTx, getCurrentRoundId } from 'rore-game-sdk';
 
 // Initialize the SDK once at app startup
 init({
@@ -84,7 +84,7 @@ All read functions use the configured `rpcUrl` by default. You can optionally pa
 Write functions return transaction data that you can sign and send with your wallet.
 
 ```typescript
-import { prepareMineTx } from 'ore-game-sdk';
+import { prepareMineTx } from 'rore-game-sdk';
 
 const tx = prepareMineTx({ blockIndex: 5, amount: 1000000000000000000n });
 // tx = { to: '0x...', data: '0x...', value: 0n }
@@ -123,7 +123,7 @@ await walletClient.sendTransaction(tx);
 Execute multiple read calls in a single RPC request:
 
 ```typescript
-import { executeBatch, encodeGetRound, decodeGetRound } from 'ore-game-sdk';
+import { executeBatch, encodeGetRound, decodeGetRound } from 'rore-game-sdk';
 
 const results = await executeBatch([
   {
@@ -145,7 +145,7 @@ const results = await executeBatch(calls, 'https://custom-rpc.com');
 Encryption utilities for secure communication:
 
 ```typescript
-import { initSessionKey, encrypt, decrypt, isKeyInitialized, clearSessionKey } from 'ore-game-sdk';
+import { initSessionKey, encrypt, decrypt, isKeyInitialized, clearSessionKey } from 'rore-game-sdk';
 
 // Initialize with base64-encoded key
 await initSessionKey('your-base64-key');
@@ -160,7 +160,7 @@ const decrypted = await decrypt(encrypted);
 The SDK is fully typed. All types are exported:
 
 ```typescript
-import type { OreGameConfig, MineArgs, MineBatchArgs } from 'ore-game-sdk';
+import type { OreGameConfig, MineArgs, MineBatchArgs } from 'rore-game-sdk';
 ```
 
 ## License
